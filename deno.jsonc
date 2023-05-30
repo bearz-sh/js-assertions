@@ -12,5 +12,8 @@
         "target": "es2021",
         "experimentalDecorators": true,
         "module": "esnext"
+    },
+    "tasks": {
+        "dnt": "deno run --allow-all --unstable ./.eng/dnt.ts"
     }
 }

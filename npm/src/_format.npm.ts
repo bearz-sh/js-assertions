@@ -1,4 +1,4 @@
-import { inspect } from "node:util"
+import { inspect } from "util"
 
 
 // deno-lint-ignore no-unused-vars
@@ -7,7 +7,6 @@ export function setAllowTrailingCommas(value: boolean): void {
 }
 
 export function format(v: unknown): string {
-    // regex will probably cause headaches later
     return inspect(v, {
         depth: Infinity,
         sorted: true,

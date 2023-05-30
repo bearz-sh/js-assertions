@@ -1,0 +1,43 @@
+{
+  "module": "./esm/mod.js",
+  "main": "./script/mod.js",
+  "name": "@bearz-sh/assertions",
+  "version": "0.1.0",
+  "description": "\nAlternative assertions for deno to support modules that leverage\nthe Deno to NPM (\"DNT\") tool and running tests from node/npm.\n",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "bearz",
+      "url": "https://bearz-sh.github.io/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bearz-sh/js-assertions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bearz-sh/js-assertions/issues"
+  },
+  "keywords": [
+    "asserts",
+    "assertions",
+    "deno",
+    "fx",
+    "bearz",
+    "bearz-sh"
+  ],
+  "exports": {
+    ".": {
+      "import": "./esm/mod.js",
+      "require": "./script/mod.js"
+    }
+  },
+  "scripts": {
+    "test": "node test_runner.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "picocolors": "^1.0.0",
+    "@deno/shim-deno-test": "~0.4.0"
+  }
+}

@@ -1,13 +1,9 @@
-import { inspect } from "node:util"
-
-
+import { inspect } from "util";
 // deno-lint-ignore no-unused-vars
-export function setAllowTrailingCommas(value: boolean): void {
+export function setAllowTrailingCommas(value) {
     // not supported in node
 }
-
-export function format(v: unknown): string {
-    // regex will probably cause headaches later
+export function format(v) {
     return inspect(v, {
         depth: Infinity,
         sorted: true,
@@ -15,4 +11,3 @@ export function format(v: unknown): string {
         getters: true,
     }).replace(/'(.*[^\\'])'/gm, '\"$1\"');
 }
-
